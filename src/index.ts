@@ -67,11 +67,11 @@ export class App {
   }
 
   warn(message: string, exception?: Error) {
-    if (!this.quiet) process.stderr.write(Colors.blue(message) + "\n")
+    if (this.verbose) process.stderr.write(Colors.blue(message) + "\n")
   }
 
   error(message: string, exception?: Error) {
-    if (!this.quiet) process.stderr.write(Colors.red(message) + "\n")
+    if (this.verbose) process.stderr.write(Colors.red(message) + "\n")
   }
 
   async writeRecords(records: Array<Array<string>>, append = false) {
