@@ -1,0 +1,27 @@
+{
+  "name": "taxmonkey",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "bin": "dist/command.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/command.ts",
+    "watch": "ava-ts -vw test/**/test-*.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "cheerio-httpcli": "^0.7.4",
+    "colors": "^1.4.0",
+    "escape-string-regexp": "^2.0.0",
+    "p-queue": "^6.1.1",
+    "progress": "^2.0.3",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "ava-ts": "^0.25.2",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "typescript": "^3.6.3"
+  }
+}
